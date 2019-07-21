@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import { css } from "@emotion/core"
@@ -7,8 +8,13 @@ import { rhythm } from "../utils/typography"
 
 export default ({data}) => {
   console.log(data);
-  return (
+  return (    
     <Layout>
+      <Helmet>
+        <html lang="pt-br"/>
+        <title>Home Page</title>
+        <meta name="description" content="Home page Description" />
+      </Helmet>
       <h1
           css={css`
             display: inline-block;
